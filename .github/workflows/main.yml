@@ -35,7 +35,7 @@ jobs:
 
       - name: Build image and push backend
         uses: docker/build-push-action@v6
-        with:
+        with: 
           context: ./simple-api
           tags: ${{ secrets.DOCKERHUB_CHAZ }}/tp-devops-simple-api:latest
           push: ${{ github.ref == 'refs/heads/main' }}
